@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+/*Creación de dos variables, también llamasas Custom Properties
+con la pseudo clase root*/
+:root {
+  --padding-container: 100px 0;
+  --color-title: #001a49;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  /*container tenga un padding que referencie a container*/
+  padding: var(--padding-container);
+}
+
+.hero {
+  /*100% del navegador*/
+  width: 100%;
+  /*Del 100% del alto de la pantalla*/
+  height: 100vh;
+  /*Pero con un alto minimo de 600px*/
+  min-height: 600px;
+  /*Y con un alto máximo de 800px*/
+  max-height: 800px;
+  position: relative;
+  display: grid;
+  /*La primera fila de 100px y la segunda que tome el contenido sobrante, despues de los 100px*/
+  grid-template-rows: 100px 1fr;
+}
+
+.nav {
+  --padding-container: 0;
+}
